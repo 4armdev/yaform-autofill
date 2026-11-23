@@ -1,4 +1,4 @@
-<img width="1200" alt="yaform-af-logo" src="https://github.com/user-attachments/assets/89af81ff-97b0-48de-b594-7adf3569d116" />
+<img width="6495" height="2565" alt="yaform-autofill-logo" src="https://github.com/user-attachments/assets/d3785d28-e67f-4bc7-ac04-862ce2628e5f" />
 <br>
 <br>
 <p align="center">
