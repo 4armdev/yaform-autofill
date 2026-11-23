@@ -13,8 +13,6 @@
   };
   const splitMulti = s => s.split('|').map(x => x.trim()).filter(Boolean);
 
-  // Только точное совпадение заголовка. Это предотвращает подстановку
-  // ответа из чужого столбца (например, «Мужской» в другой вопрос).
   function findHeader(headers, question, rowTitle = '') {
     const expected = norm(rowTitle ? `${question} ${rowTitle}` : question);
     if (!expected) return -1;
@@ -46,7 +44,6 @@
     const unmatched = [];
     const questions = [...document.querySelectorAll('.QuestionMarkup.Question')];
     for (const q of questions) {
-      // Вступительный информационный блок не имеет типа вопроса — пропускаем.
       const isMatrix = q.classList.contains('MatrixQuestion');
       const isRadio = q.classList.contains('RadioQuestion');
       const isCheckbox = q.classList.contains('CheckboxQuestion');
