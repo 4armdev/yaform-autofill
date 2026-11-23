@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "YAform autofill (Tor/Firefox)",
+  "version": "1.4.0",
+  "description": "Заполнение Яндекс Форм из csv файла",
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://forms.yandex.ru/*"
+  ],
+  "browser_action": {
+    "default_title": "YAform autofill"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://forms.yandex.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "csv-yandex-filler@charmdev.charmdev"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  }
+}
