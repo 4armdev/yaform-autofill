@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YAform autofill</title>
+<style>
+body{font:14px system-ui,sans-serif;width:330px;margin:14px;color:#202124}
+h2{font-size:17px;margin:0 0 12px}label{display:block;margin:10px 0 5px}
+input,select,button{width:100%;box-sizing:border-box;padding:9px;border:1px solid #bbb;border-radius:7px;background:white}
+button{margin-top:10px;background:#2463eb;color:white;border:0;font-weight:600;cursor:pointer}
+button.secondary{background:#eee;color:#222}
+small{color:#555;display:block;margin-top:7px;line-height:1.4}
+#status{white-space:pre-wrap;margin-top:10px;line-height:1.4}
+</style>
+</head>
+<body>
+<h2>заполнение Яндекс Форм из .csv</h2>
+<label>загрузите csv файл</label><input id="csv" type="file" accept=".csv,text/csv">
+<label>выберите номер строки (профиля)</label><select id="profile" disabled><option>Сначала загрузите csv</option></select>
+<button id="fill" disabled>заполнить открытую форму</button>
+<button id="clear" class="secondary">очистить сохранённый csv</button>
+<small>заполняется только выбранный профиль (строка). самостоятельно форма не отправляется, только заполнение</small>
+<div id="status" role="status"></div>
+<script src="popup.js"></script>
+</body>
+</html>
