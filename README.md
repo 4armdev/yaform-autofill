@@ -1,19 +1,113 @@
-<img width="6495" height="2565" alt="yaform-af-logo" src="https://github.com/user-attachments/assets/89af81ff-97b0-48de-b594-7adf3569d116" />
-
+<img width="1200" alt="yaform-af-logo" src="https://github.com/user-attachments/assets/89af81ff-97b0-48de-b594-7adf3569d116" />
+<br>
+<br>
 <p align="center">
 <img src="https://img.shields.io/badge/version-1.4.0-blue">
-<img src="https://img.shields.io/badge/JavaScript-black">
-<img src="https://img.shields.io/badge/HTML5-black">
-<img src="https://img.shields.io/badge/CSS3-black">
-<img src="https://img.shields.io/badge/WebExtensions_API-black">
-<img src="https://img.shields.io/badge/Chrome_Manifest_V3-black">
-<img src="https://img.shields.io/badge/Firefox_Manifest_V2-black">
-<img src="https://img.shields.io/badge/Browser_Storage_API-black">
-<img src="https://img.shields.io/badge/Tabs_API-black">
+<img src="https://img.shields.io/badge/JavaScript-gray">
+<img src="https://img.shields.io/badge/HTML5-gray">
+<img src="https://img.shields.io/badge/CSS3-gray">
+<img src="https://img.shields.io/badge/WebExtensions_API-gray">
+  <br>
+<img src="https://img.shields.io/badge/Chrome_Manifest_V3-gray">
+<img src="https://img.shields.io/badge/Firefox_Manifest_V2-gray">
+<img src="https://img.shields.io/badge/Browser_Storage_API-gray">
+  <br>
+<img src="https://img.shields.io/badge/Tabs_API-gray">
 <img src="https://img.shields.io/badge/created_by-charmdev-red"> 
 </p>
 
 ## 📖 Дескрипшн
 Заполняй Яндекс формы автоматически, по твоим матрицам данных в формате .csv
+<br>
+## Формат csv файла
 
+Расширение использует .csv файл, в котором каждая строка соответствует отдельному профилю респондента.
+
+- **Первая строка** — заголовки столбцов. Каждый заголовок должен соответствовать тексту вопроса в Яндекс Форме.
+- **Каждая следующая строка** — отдельный профиль респондента.
+- **Один столбец** — один вопрос или одна строка матричного вопроса.
+- **Пустые ячейки** — пропускаются при заполнении формы.
+
+### Пример CSV
+
+```csv
+Какой ваш пол?,Каким транспортом вы пользуетесь?,Дополнительный комментарий
+Женский,Автобус|Метро,удобно добираться до университета
+Мужской,Метро|Трамвай,обычно езжу на общественном транспорте
+Женский,Автомобиль,
+```
+
+### Доступны следующие типы вопросов
+
+**1. Один вариант ответа**
+
+В ячейке указывается один вариант, который должен совпадать с вариантом в форме.
+
+```csv
+Какой ваш пол?
+Женский
+Мужской
+```
+
+**2. Несколько вариантов ответа**
+
+Если вопрос допускает несколько вариантов, перечислите их через вертикальную черту `|`.
+
+```csv
+Каким транспортом вы пользуетесь?
+Автобус|Метро
+Метро|Трамвай
+Автобус|Такси|Метро
+```
+
+[!] каждый вариант должен соответствовать отдельному варианту ответа в Яндекс Форме.
+
+**3. Открытый текстовый вопрос**
+
+В ячейке указывается обычный текстовый ответ.
+
+```csv
+Какое место в городе вам нравится больше всего?
+мне нравится набережная, там приятно гулять вечером
+```
+
+**4. Матричный вопрос**
+
+Для каждой строки матрицы необходимо создать отдельный столбец.
+
+Формат заголовка:
+
+```text
+Название матричного вопроса — Название строки матрицы
+```
+
+Пример:
+
+```csv
+Оцените город — Парки и скверы,Оцените город — Общественный транспорт
+5,4
+4,3
+3,5
+```
+
+В ячейке указывается выбранный вариант ответа для соответствующей строки матрицы.
+
+### Выбор профиля
+
+После загрузки CSV расширение позволяет выбрать номер профиля.
+
+Например:
+
+| Номер профиля | Строка CSV |
+|---|---|
+| 1 | Вторая строка файла |
+| 2 | Третья строка файла |
+| 3 | Четвёртая строка файла |
+
+Первая строка всегда используется для заголовков и не считается профилем.
+
+<br><br>
+<p align="center">
+  сделано с ❤️ and some ии
+</p>
 
