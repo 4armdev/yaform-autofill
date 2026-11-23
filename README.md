@@ -19,6 +19,39 @@
 ## 📖 Дескрипшн
 Заполняй Яндекс формы автоматически, по твоим матрицам данных в формате .csv
 <br>
+
+## 💻 Поддерживаемые браузеры
+
+Расширение разработано для двух основных семейств браузеров: Chromium и Firefox (Gecko)
+
+### <img src="https://cdn.simpleicons.org/googlechrome/4285F4" width="18" alt="chromium-based"/> &ensp;Chromium-based
+
+Используется сборка из директории `chrome/` 
+
+- Google Chrome
+- Microsoft Edge
+- Brave
+- Opera / Opera GX
+- Vivaldi
+- Яндекс Браузер
+- Ungoogled Chromium
+
+### <img src="https://cdn.simpleicons.org/firefoxbrowser/FF7139" width="18" alt="gecko-based"/> &ensp;Firefox / Gecko-based
+
+Используется сборка из директории `firefox-tor/` 
+
+- Mozilla Firefox
+- Tor Browser
+- LibreWolf
+- Waterfox
+- Floorp
+- Zen Browser
+- Mullvad Browser
+- GNU IceCat
+
+
+> Safari и браузеры на других движках в текущей версии не поддерживаются.
+
 ## Формат csv файла
 
 Расширение использует .csv файл, в котором каждая строка соответствует отдельному профилю респондента.
