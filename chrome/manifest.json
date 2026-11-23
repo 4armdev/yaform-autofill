@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YAform autofill",
+  "version": "1.4.0",
+  "description": "Заполнение Яндекс Форм из csv файла",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://forms.yandex.ru/*"],
+  "action": {"default_popup": "popup.html", "default_title": "YAform autofill"},
+  "content_scripts": [{
+    "matches": ["https://forms.yandex.ru/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}
